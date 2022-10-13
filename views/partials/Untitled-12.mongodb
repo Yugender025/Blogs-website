@@ -1,0 +1,6 @@
+db.orders.insertMany(
+    {
+       slik:20,
+       cotton:30
+    }
+)

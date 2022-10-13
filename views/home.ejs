@@ -1,0 +1,25 @@
+<%- include("partials/header")%>
+<h1>Home</h1>
+<p style="font-family:cursive"><%=starting   %></p>
+ <div class="conatiner">
+   <div class="row">
+     <div class="col-2">
+       <img class="center" style="width: 50%; height:50%;" src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-1.2.1&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb" />
+     </div>
+     <div class="col-2">
+      <h4 style="font-family:cursive">
+        “Life stories do not simply reflect personality. They are personality, or more accurately, they are important parts of personality, along with other parts, like dispositional traits, goals, and values,” writes Dan McAdams, a professor of psychology at Northwestern University, along with Erika Manczak, in a chapter for the APA Handbook of Personality and Social Psychology.
+      </h4>
+     </div>
+   </div>
+ </div>
+<%  console.log(posts); %>
+<!--  for(var i=0; i<posts.length; i++){ -->
+<%  posts.forEach(function(post){  %>
+  <h1><%= post.title %></h1>
+  <p>
+  <%= (post.content).substring(0,100) + "... "%>
+   <a href="/posts/<%=post._id%>">Read more</a>
+  </p>
+<%  }); %>
+<%- include("partials/footer")%>
